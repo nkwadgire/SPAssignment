@@ -16,7 +16,6 @@
 		8FFFFCA823ABAEB500B58EB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFFCA623ABAEB500B58EB9 /* LaunchScreen.storyboard */; };
 		8FFFFCB323ABAEB500B58EB9 /* SPAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCB223ABAEB500B58EB9 /* SPAssignmentTests.swift */; };
 		8FFFFCBE23ABAEB500B58EB9 /* SPAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCBD23ABAEB500B58EB9 /* SPAssignmentUITests.swift */; };
-		8FFFFCD323ABB02000B58EB9 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD223ABB02000B58EB9 /* .swiftlint.yml */; };
 		8FFFFCD923ABB4E600B58EB9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
 		8FFFFCDA23ABB4E600B58EB9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
 		8FFFFCDB23ABB4E600B58EB9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
@@ -29,6 +28,15 @@
 		8FFFFCE923ABB64700B58EB9 /* PSIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCE823ABB64700B58EB9 /* PSIndex.swift */; };
 		8FFFFCEA23ABB64700B58EB9 /* PSIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCE823ABB64700B58EB9 /* PSIndex.swift */; };
 		8FFFFCEB23ABB64700B58EB9 /* PSIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCE823ABB64700B58EB9 /* PSIndex.swift */; };
+		8FFFFCF223ABC3B400B58EB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCF123ABC3B400B58EB9 /* Constants.swift */; };
+		8FFFFCF323ABC3B400B58EB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCF123ABC3B400B58EB9 /* Constants.swift */; };
+		8FFFFCF423ABC3B400B58EB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCF123ABC3B400B58EB9 /* Constants.swift */; };
+		8FFFFCFA23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCF923ABC90200B58EB9 /* PSIAnnotation.swift */; };
+		8FFFFCFB23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCF923ABC90200B58EB9 /* PSIAnnotation.swift */; };
+		8FFFFCFC23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCF923ABC90200B58EB9 /* PSIAnnotation.swift */; };
+		8FFFFD0223ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFD0123ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift */; };
+		8FFFFD0323ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFD0123ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift */; };
+		8FFFFD0423ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFD0123ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift */; };
 		CD0CAB5FD6C1322D180DC2F8 /* Pods_SPAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9158B43CC5B94C0F980C4B /* Pods_SPAssignment.framework */; };
 		D54EF8D5CE3FECE96336C12D /* Pods_SPAssignment_SPAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B491726B9FC1F53BDD7C03 /* Pods_SPAssignment_SPAssignmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +86,9 @@
 		8FFFFCE023ABB54400B58EB9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8FFFFCE423ABB63700B58EB9 /* PSIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIndexViewModel.swift; sourceTree = "<group>"; };
 		8FFFFCE823ABB64700B58EB9 /* PSIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIndex.swift; sourceTree = "<group>"; };
+		8FFFFCF123ABC3B400B58EB9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FFFFCF923ABC90200B58EB9 /* PSIAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIAnnotation.swift; sourceTree = "<group>"; };
+		8FFFFD0123ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIAnnotationCoordinator.swift; sourceTree = "<group>"; };
 		BB462E53E9F288A506A9070C /* Pods-SPAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SPAssignmentTests/Pods-SPAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +156,7 @@
 		8FFFFC9A23ABAEB200B58EB9 /* SPAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				8FFFFCEC23ABC39000B58EB9 /* Common */,
 				8FFFFCD623ABB37400B58EB9 /* View */,
 				8FFFFCD523ABB36F00B58EB9 /* Model */,
 				8FFFFCD423ABB36900B58EB9 /* ViewModel */,
@@ -198,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				8FFFFCE823ABB64700B58EB9 /* PSIndex.swift */,
+				8FFFFCF923ABC90200B58EB9 /* PSIAnnotation.swift */,
+				8FFFFD0123ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +230,14 @@
 				8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8FFFFCEC23ABC39000B58EB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8FFFFCF123ABC3B400B58EB9 /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E977F8CD2494F7599B8D9768 /* Pods */ = {
@@ -342,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FFFFCD323ABB02000B58EB9 /* .swiftlint.yml in Resources */,
 				8FFFFCA823ABAEB500B58EB9 /* LaunchScreen.storyboard in Resources */,
 				8FFFFCA523ABAEB500B58EB9 /* Preview Assets.xcassets in Resources */,
 				8FFFFCA223ABAEB500B58EB9 /* Assets.xcassets in Resources */,
@@ -513,6 +534,9 @@
 				8FFFFCE123ABB54400B58EB9 /* MapView.swift in Sources */,
 				8FFFFCD923ABB4E600B58EB9 /* Webservice.swift in Sources */,
 				8FFFFCE523ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
+				8FFFFCFA23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
+				8FFFFCF223ABC3B400B58EB9 /* Constants.swift in Sources */,
+				8FFFFD0223ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCA023ABAEB200B58EB9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,8 +547,11 @@
 			files = (
 				8FFFFCEA23ABB64700B58EB9 /* PSIndex.swift in Sources */,
 				8FFFFCE623ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
+				8FFFFCF323ABC3B400B58EB9 /* Constants.swift in Sources */,
 				8FFFFCDA23ABB4E600B58EB9 /* Webservice.swift in Sources */,
+				8FFFFD0323ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCE223ABB54400B58EB9 /* MapView.swift in Sources */,
+				8FFFFCFB23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
 				8FFFFCB323ABAEB500B58EB9 /* SPAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,8 +562,11 @@
 			files = (
 				8FFFFCEB23ABB64700B58EB9 /* PSIndex.swift in Sources */,
 				8FFFFCE723ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
+				8FFFFCF423ABC3B400B58EB9 /* Constants.swift in Sources */,
 				8FFFFCDB23ABB4E600B58EB9 /* Webservice.swift in Sources */,
+				8FFFFD0423ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCE323ABB54400B58EB9 /* MapView.swift in Sources */,
+				8FFFFCFC23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
 				8FFFFCBE23ABAEB500B58EB9 /* SPAssignmentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +726,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CG.SPAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -717,6 +748,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CG.SPAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -739,6 +771,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CG.SPAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -762,6 +795,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CG.SPAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -783,6 +817,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CG.SPAssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -804,6 +839,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CG.SPAssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

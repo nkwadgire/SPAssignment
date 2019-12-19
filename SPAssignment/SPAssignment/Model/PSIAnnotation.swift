@@ -1,34 +1,31 @@
 //
 /**
 *  * *****************************************************************************
-*  * Filename: ContentView.swift                                                 *
+*  * Filename: PSIAnnotation.swift                                               *
 *  * Author  : Nagraj Wadgire                                                    *
 *  * Creation Date: 19/12/19                                                     *
 *  * *
 *  * *****************************************************************************
 *  * Description:                                                                *
-*  * ContentView                                                                 *
+*  * PSIAnnotation class will create annotation point for passed coordinates     *
 *  *                                                                             *
 *  * *****************************************************************************
 */
-        
+
+import Foundation
+import MapKit
 import SwiftUI
-import Combine
 
-struct ContentView: View {
-    @ObservedObject var viewModel = PSIndexViewModel()
-    var body: some View {
-        NavigationView {
-            VStack {
-                MapView(annotationPoints: $viewModel.annotations).edgesIgnoringSafeArea(.top)
-            }
-            .navigationBarTitle(Text("PSI"))
-        }
-    }
-}
+class PSIAnnotation: NSObject, MKAnnotation, Identifiable {
+    let title: String?
+    let subtitle: String?
+    let coordinate: CLLocationCoordinate2D
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    init(title: String?,
+         subtitle: String?,
+         coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.subtitle = subtitle
+        self.coordinate = coordinate
     }
 }
