@@ -1,0 +1,6 @@
+framework module Pods_SPAssignmentTests {
+  umbrella header "Pods-SPAssignmentTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
