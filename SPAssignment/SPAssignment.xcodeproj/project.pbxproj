@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8DA8C4881CCB1D21E54A764D /* Pods_SPAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B057A5BE943EBAF4FEC4ABB /* Pods_SPAssignmentTests.framework */; };
+		8F06B79B23AD36D600CF6DA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */; };
+		8F06B79C23AD376500CF6DA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */; };
+		8F06B79D23AD376600CF6DA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */; };
 		8F2C558D23ACC48E00BD32D4 /* PSIndexSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C558C23ACC48E00BD32D4 /* PSIndexSpecs.swift */; };
 		8F2C559023ACC4EA00BD32D4 /* PSIndex.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C558F23ACC4EA00BD32D4 /* PSIndex.json */; };
 		8F2C559323ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C559223ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift */; };
@@ -70,6 +73,7 @@
 		589BE79ABCF93DD5D186B913 /* Pods-SPAssignment-SPAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPAssignment-SPAssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-SPAssignment-SPAssignmentUITests/Pods-SPAssignment-SPAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D9158B43CC5B94C0F980C4B /* Pods_SPAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD7101092B0C1FD5F33DBA6 /* Pods-SPAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPAssignment.release.xcconfig"; path = "Target Support Files/Pods-SPAssignment/Pods-SPAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8F2C558C23ACC48E00BD32D4 /* PSIndexSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIndexSpecs.swift; sourceTree = "<group>"; };
 		8F2C558F23ACC4EA00BD32D4 /* PSIndex.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PSIndex.json; sourceTree = "<group>"; };
 		8F2C559223ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIndexViewModelSpecs.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE1BA7423ACF33C006C0B0A /* Constants.swift */,
+				8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				8FFFFCE523ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
 				8FFFFCFA23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
 				8FFFFD0223ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
+				8F06B79B23AD36D600CF6DA0 /* StringExtension.swift in Sources */,
 				8FFFFCA023ABAEB200B58EB9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +558,7 @@
 				8FFFFD0323ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCE223ABB54400B58EB9 /* MapView.swift in Sources */,
 				8FFFFCFB23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
+				8F06B79C23AD376500CF6DA0 /* StringExtension.swift in Sources */,
 				8FFFFCB323ABAEB500B58EB9 /* SPAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +572,7 @@
 				8FE1BA7823ACF965006C0B0A /* Webservice.swift in Sources */,
 				8FFFFD0423ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCE323ABB54400B58EB9 /* MapView.swift in Sources */,
+				8F06B79D23AD376600CF6DA0 /* StringExtension.swift in Sources */,
 				8FE1BA7723ACF960006C0B0A /* Constants.swift in Sources */,
 				8FFFFCFC23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
 				8FFFFCBE23ABAEB500B58EB9 /* SPAssignmentUITests.swift in Sources */,

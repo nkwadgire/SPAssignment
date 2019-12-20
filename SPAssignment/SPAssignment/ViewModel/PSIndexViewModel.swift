@@ -21,11 +21,7 @@ import MapKit
 class PSIndexViewModel: ObservableObject {
     private var cancellable: AnyCancellable?
     init() {
-        if #available(iOS 13.0, *) {
-            fetchPSIndexValues()
-        } else {
-            getPSIndexValues()
-        }
+        updatePSIndex()
     }
     
     var annotations = [PSIAnnotation]() {
@@ -36,6 +32,13 @@ class PSIndexViewModel: ObservableObject {
         }
     }
     
+    func updatePSIndex() {
+        if #available(iOS 13.0, *) {
+            fetchPSIndexValues()
+        } else {
+            getPSIndexValues()
+        }
+    }
     /**
      Returns the array of PSIAnnotation objects. These annotation points will be drawn using mapView
      
@@ -47,7 +50,7 @@ class PSIndexViewModel: ObservableObject {
             let latitudeValue = annotation.location?.psiLatitude ?? 0.0
             let longitudeValue = annotation.location?.psiLongitude ?? 0.0
             let coordinate = CLLocationCoordinate2D.init(latitude: latitudeValue, longitude: longitudeValue)
-            let annotation = PSIAnnotation(title: annotation.name, subtitle: annotation.name, coordinate: coordinate)
+            let annotation = PSIAnnotation(title: annotation.name?.camelCase(), subtitle: "Pollutant Standards Index (PSI)", coordinate: coordinate)
             annotationArray.append(annotation)
         }
         return annotationArray
