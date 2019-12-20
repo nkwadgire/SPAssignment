@@ -18,7 +18,9 @@ import Combine
 class Webservice: NSObject {
     // MARK: Webservice methods
     
-    // fetchPSIndex : This method is invoked if the iOS version is 13 and above
+    /**
+     This method is invoked if the iOS version is 13 and above.
+     */
     func fetchPSIndex() -> AnyPublisher<PSIndex?, Error> {
         
         guard let psiURL = URL(string: URLList.PSIUrl) else {
@@ -32,7 +34,9 @@ class Webservice: NSObject {
             .eraseToAnyPublisher()
     }
     
-    // getPSIndex : This method is invoked if the iOS version is less than 13
+    /**
+     This method is invoked if the iOS version is less than 13.
+     */
     func getPSIndex(completion: @escaping(PSIndex) -> Void) {
         let url = URL(string: URLList.PSIUrl)!
         

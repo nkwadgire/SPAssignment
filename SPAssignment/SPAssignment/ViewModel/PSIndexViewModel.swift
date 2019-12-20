@@ -36,6 +36,11 @@ class PSIndexViewModel: ObservableObject {
         }
     }
     
+    /**
+     Returns the array of PSIAnnotation objects. These annotation points will be drawn using mapView
+     
+     @param regionMetaData the array of PSIRegionMetaData objects which is received as webservice reponse
+     */
     func getAnnotations(regionMetaData: [PSIRegionMetaData]) -> [PSIAnnotation] {
         var annotationArray = [PSIAnnotation]()
         for annotation in regionMetaData {
@@ -48,12 +53,18 @@ class PSIndexViewModel: ObservableObject {
         return annotationArray
     }
     
+    /**
+     This method retrieves the PSIndex values via GET service call. This method is calling if iOS version is less than 13.
+     */
     func getPSIndexValues() {
         Webservice().getPSIndex { (response) in
             self.annotations = self.getAnnotations(regionMetaData: response.regionMetaData ?? [])
         }
     }
     
+    /**
+     This method retrieves the PSIndex values via GET service call. This method is calling if iOS version is greater than or equal to 13.
+     */
     func fetchPSIndexValues() {
         let publisher = Webservice().fetchPSIndex()
         publisher.sink(receiveCompletion: { completion in
