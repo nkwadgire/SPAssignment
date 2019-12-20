@@ -4,8 +4,6 @@
 target 'SPAssignment' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Quick'
-  pod 'Nimble'
   # Pods for SPAssignment
 
   target 'SPAssignmentTests' do
@@ -17,8 +15,6 @@ target 'SPAssignment' do
 
   target 'SPAssignmentUITests' do
     # Pods for testing
-    pod 'Quick'
-    pod 'Nimble'
   end
 
 end

@@ -18,7 +18,7 @@ import SwiftUI
 import Combine
 import MapKit
 
-final class PSIndexViewModel: ObservableObject {
+class PSIndexViewModel: ObservableObject {
     private var cancellable: AnyCancellable?
     init() {
         if #available(iOS 13.0, *) {
@@ -36,7 +36,7 @@ final class PSIndexViewModel: ObservableObject {
         }
     }
     
-    private func getAnnotations(regionMetaData: [PSIRegionMetaData]) -> [PSIAnnotation] {
+    func getAnnotations(regionMetaData: [PSIRegionMetaData]) -> [PSIAnnotation] {
         var annotationArray = [PSIAnnotation]()
         for annotation in regionMetaData {
             let latitudeValue = annotation.location?.psiLatitude ?? 0.0
@@ -48,13 +48,13 @@ final class PSIndexViewModel: ObservableObject {
         return annotationArray
     }
     
-    private func getPSIndexValues() {
+    func getPSIndexValues() {
         Webservice().getPSIndex { (response) in
             self.annotations = self.getAnnotations(regionMetaData: response.regionMetaData ?? [])
         }
     }
     
-    private func fetchPSIndexValues() {
+    func fetchPSIndexValues() {
         let publisher = Webservice().fetchPSIndex()
         publisher.sink(receiveCompletion: { completion in
             switch completion {

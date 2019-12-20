@@ -15,7 +15,7 @@
 import Foundation
 import MapKit
 
-struct PSI: Decodable {
+struct PSIndex: Decodable {
     var regionMetaData: [PSIRegionMetaData]?
     var items: [PSIItems]?
     var apiInfo: PSIStatus?

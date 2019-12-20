@@ -19,20 +19,20 @@ class Webservice: NSObject {
     // MARK: Webservice methods
     
     // fetchPSIndex : This method is invoked if the iOS version is 13 and above
-    func fetchPSIndex() -> AnyPublisher<PSI?, Error> {
+    func fetchPSIndex() -> AnyPublisher<PSIndex?, Error> {
         guard let psiURL = URL(string: URLList.PSIUrl) else {
             fatalError("Invalid URL")
         }
         return URLSession.shared.dataTaskPublisher(for: psiURL)
             .map { $0.data }
-            .decode(type: PSI.self, decoder: JSONDecoder())
+            .decode(type: PSIndex.self, decoder: JSONDecoder())
             .map {$0}
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
     // getPSIndex : This method is invoked if the iOS version is less than 13
-    func getPSIndex(completion: @escaping(PSI) -> Void) {
+    func getPSIndex(completion: @escaping(PSIndex) -> Void) {
         let url = URL(string: URLList.PSIUrl)!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -47,11 +47,11 @@ class Webservice: NSObject {
             }
             do {
                 let decoder = JSONDecoder()
-                let posts = try decoder.decode(PSI.self, from: data)
+                let posts = try decoder.decode(PSIndex.self, from: data)
                 completion(posts)
             } catch {
                 print("Error: \(error.localizedDescription)")
-                completion(PSI())
+                completion(PSIndex())
             }
         }
         task.resume()
