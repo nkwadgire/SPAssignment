@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "customAnnotation-1.png",
+      "filename" : "annotation-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "customAnnotation-2.png",
+      "filename" : "annotation-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "customAnnotation.png",
+      "filename" : "annotation.png",
       "scale" : "3x"
     }
   ],

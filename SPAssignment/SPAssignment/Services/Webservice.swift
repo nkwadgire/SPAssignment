@@ -20,6 +20,7 @@ class Webservice: NSObject {
     
     // fetchPSIndex : This method is invoked if the iOS version is 13 and above
     func fetchPSIndex() -> AnyPublisher<PSIndex?, Error> {
+        
         guard let psiURL = URL(string: URLList.PSIUrl) else {
             fatalError("Invalid URL")
         }

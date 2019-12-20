@@ -52,17 +52,17 @@ class PSIndexSpecs: QuickSpec {
                     expect(psIndex.regionMetaData).to(beAKindOf([PSIRegionMetaData].self))
                 }
                 
-                // Passes if 'psIndex.regionMetaData?[0].location?.psiLatitude' is equal to 1.35735
+                // Passes if 'psi.location?.psiLatitude' is equal to 1.35735 where psi.title is "west"
                 it("can parse the correct latitude") {
                     for psi in psIndex.regionMetaData ?? [] where psi.name == "west" {
-                        expect(psIndex.regionMetaData?[0].location?.psiLatitude).to(beCloseTo(1.35735, within: 0.1))
+                        expect(psi.location?.psiLatitude).to(beCloseTo(1.35735, within: 0.1))
                     }
                 }
                 
-                // Passes if 'psIndex.regionMetaData?[0].location?.psiLongitude' is equal to 103.7
+                // Passes if 'psi.location?.psiLongitude' is equal to 103.7 where psi.title is "west"
                 it("can parse the correct longitude") {
                     for psi in psIndex.regionMetaData ?? [] where psi.name == "west" {
-                        expect(psIndex.regionMetaData?[0].location?.psiLongitude).to(beCloseTo(103.7, within: 0.1))
+                        expect(psi.location?.psiLongitude).to(beCloseTo(103.7, within: 0.1))
                     }
                 }
                 

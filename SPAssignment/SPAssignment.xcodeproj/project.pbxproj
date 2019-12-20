@@ -12,6 +12,9 @@
 		8F2C559023ACC4EA00BD32D4 /* PSIndex.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C558F23ACC4EA00BD32D4 /* PSIndex.json */; };
 		8F2C559323ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C559223ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift */; };
 		8FE1BA7523ACF33C006C0B0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1BA7423ACF33C006C0B0A /* Constants.swift */; };
+		8FE1BA7623ACF95D006C0B0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1BA7423ACF33C006C0B0A /* Constants.swift */; };
+		8FE1BA7723ACF960006C0B0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1BA7423ACF33C006C0B0A /* Constants.swift */; };
+		8FE1BA7823ACF965006C0B0A /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
 		8FFFFC9C23ABAEB200B58EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFC9B23ABAEB200B58EB9 /* AppDelegate.swift */; };
 		8FFFFC9E23ABAEB200B58EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFC9D23ABAEB200B58EB9 /* SceneDelegate.swift */; };
 		8FFFFCA023ABAEB200B58EB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFC9F23ABAEB200B58EB9 /* ContentView.swift */; };
@@ -22,7 +25,6 @@
 		8FFFFCBE23ABAEB500B58EB9 /* SPAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCBD23ABAEB500B58EB9 /* SPAssignmentUITests.swift */; };
 		8FFFFCD923ABB4E600B58EB9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
 		8FFFFCDA23ABB4E600B58EB9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
-		8FFFFCDB23ABB4E600B58EB9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCD823ABB4E600B58EB9 /* Webservice.swift */; };
 		8FFFFCE123ABB54400B58EB9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCE023ABB54400B58EB9 /* MapView.swift */; };
 		8FFFFCE223ABB54400B58EB9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCE023ABB54400B58EB9 /* MapView.swift */; };
 		8FFFFCE323ABB54400B58EB9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFFCE023ABB54400B58EB9 /* MapView.swift */; };
@@ -546,6 +548,7 @@
 				8F2C559323ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift in Sources */,
 				8FFFFCE623ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
 				8FFFFCDA23ABB4E600B58EB9 /* Webservice.swift in Sources */,
+				8FE1BA7623ACF95D006C0B0A /* Constants.swift in Sources */,
 				8FFFFD0323ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCE223ABB54400B58EB9 /* MapView.swift in Sources */,
 				8FFFFCFB23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
@@ -559,9 +562,10 @@
 			files = (
 				8FFFFCEB23ABB64700B58EB9 /* PSIndex.swift in Sources */,
 				8FFFFCE723ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
-				8FFFFCDB23ABB4E600B58EB9 /* Webservice.swift in Sources */,
+				8FE1BA7823ACF965006C0B0A /* Webservice.swift in Sources */,
 				8FFFFD0423ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,
 				8FFFFCE323ABB54400B58EB9 /* MapView.swift in Sources */,
+				8FE1BA7723ACF960006C0B0A /* Constants.swift in Sources */,
 				8FFFFCFC23ABC90200B58EB9 /* PSIAnnotation.swift in Sources */,
 				8FFFFCBE23ABAEB500B58EB9 /* SPAssignmentUITests.swift in Sources */,
 			);
