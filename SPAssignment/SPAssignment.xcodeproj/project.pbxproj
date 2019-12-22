@@ -11,6 +11,9 @@
 		8F06B79B23AD36D600CF6DA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */; };
 		8F06B79C23AD376500CF6DA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */; };
 		8F06B79D23AD376600CF6DA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */; };
+		8F06B79F23AF21B400CF6DA0 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79E23AF21B400CF6DA0 /* ActivityIndicatorView.swift */; };
+		8F06B7A023AF21B400CF6DA0 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79E23AF21B400CF6DA0 /* ActivityIndicatorView.swift */; };
+		8F06B7A123AF21B400CF6DA0 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F06B79E23AF21B400CF6DA0 /* ActivityIndicatorView.swift */; };
 		8F2C558D23ACC48E00BD32D4 /* PSIndexSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C558C23ACC48E00BD32D4 /* PSIndexSpecs.swift */; };
 		8F2C559023ACC4EA00BD32D4 /* PSIndex.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C558F23ACC4EA00BD32D4 /* PSIndex.json */; };
 		8F2C559323ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C559223ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift */; };
@@ -74,6 +77,7 @@
 		6D9158B43CC5B94C0F980C4B /* Pods_SPAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD7101092B0C1FD5F33DBA6 /* Pods-SPAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPAssignment.release.xcconfig"; path = "Target Support Files/Pods-SPAssignment/Pods-SPAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		8F06B79A23AD36D600CF6DA0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8F06B79E23AF21B400CF6DA0 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8F2C558C23ACC48E00BD32D4 /* PSIndexSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIndexSpecs.swift; sourceTree = "<group>"; };
 		8F2C558F23ACC4EA00BD32D4 /* PSIndex.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PSIndex.json; sourceTree = "<group>"; };
 		8F2C559223ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIndexViewModelSpecs.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				8FFFFCE023ABB54400B58EB9 /* MapView.swift */,
+				8F06B79E23AF21B400CF6DA0 /* ActivityIndicatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -534,6 +539,7 @@
 				8FFFFC9C23ABAEB200B58EB9 /* AppDelegate.swift in Sources */,
 				8FFFFC9E23ABAEB200B58EB9 /* SceneDelegate.swift in Sources */,
 				8FFFFCE923ABB64700B58EB9 /* PSIndex.swift in Sources */,
+				8F06B79F23AF21B400CF6DA0 /* ActivityIndicatorView.swift in Sources */,
 				8FFFFCE123ABB54400B58EB9 /* MapView.swift in Sources */,
 				8FFFFCD923ABB4E600B58EB9 /* Webservice.swift in Sources */,
 				8FE1BA7523ACF33C006C0B0A /* Constants.swift in Sources */,
@@ -552,6 +558,7 @@
 				8F2C558D23ACC48E00BD32D4 /* PSIndexSpecs.swift in Sources */,
 				8FFFFCEA23ABB64700B58EB9 /* PSIndex.swift in Sources */,
 				8F2C559323ACE8F200BD32D4 /* PSIndexViewModelSpecs.swift in Sources */,
+				8F06B7A023AF21B400CF6DA0 /* ActivityIndicatorView.swift in Sources */,
 				8FFFFCE623ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
 				8FFFFCDA23ABB4E600B58EB9 /* Webservice.swift in Sources */,
 				8FE1BA7623ACF95D006C0B0A /* Constants.swift in Sources */,
@@ -568,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FFFFCEB23ABB64700B58EB9 /* PSIndex.swift in Sources */,
+				8F06B7A123AF21B400CF6DA0 /* ActivityIndicatorView.swift in Sources */,
 				8FFFFCE723ABB63700B58EB9 /* PSIndexViewModel.swift in Sources */,
 				8FE1BA7823ACF965006C0B0A /* Webservice.swift in Sources */,
 				8FFFFD0423ABCF6900B58EB9 /* PSIAnnotationCoordinator.swift in Sources */,

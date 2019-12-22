@@ -18,15 +18,26 @@ import Combine
 struct ContentView: View {
     @ObservedObject var viewModel = PSIndexViewModel()
     var body: some View {
-        NavigationView {
-            VStack {
-                MapView(annotationPoints: $viewModel.annotations).edgesIgnoringSafeArea(.bottom)
+        ActivityIndicatorView(isShowing: $viewModel.loading) {
+            NavigationView {
+                VStack {
+                    //MapView(annotationPoints: $viewModel.annotations).edgesIgnoringSafeArea(.bottom)
+                    if self.viewModel.annotations.isEmpty {
+                        Text("Unable to fetch the PSIndex values, please try after some  time by pressing Refresh button.")
+                        
+                    } else {
+                        MapView(annotationPoints: self.$viewModel.annotations).edgesIgnoringSafeArea(.bottom)
+                        
+                    }
+                }
+                .navigationBarTitle(Text("PSIndex"), displayMode: .inline)
+                .navigationBarItems(trailing:
+                    Button("Refresh") {
+                        DispatchQueue.main.async {
+                                self.viewModel.updatePSIndex()
+                        }
+                })
             }
-            .navigationBarTitle(Text("PSIndex"), displayMode: .inline)
-            .navigationBarItems(trailing:
-                Button("Refresh") {
-                    self.viewModel.updatePSIndex()
-            })
         }
     }
 }

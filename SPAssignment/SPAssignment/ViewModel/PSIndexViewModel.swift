@@ -19,6 +19,13 @@ import Combine
 import MapKit
 
 class PSIndexViewModel: ObservableObject {
+    @Published var loading = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send(self)
+            }
+        }
+    }
     private var cancellable: AnyCancellable?
     init() {
         updatePSIndex()
@@ -33,6 +40,7 @@ class PSIndexViewModel: ObservableObject {
     }
     
     func updatePSIndex() {
+        self.loading = true
         if #available(iOS 13.0, *) {
             fetchPSIndexValues()
         } else {
@@ -61,6 +69,7 @@ class PSIndexViewModel: ObservableObject {
      */
     func getPSIndexValues() {
         Webservice().getPSIndex { (response) in
+            self.loading = false
             self.annotations = self.getAnnotations(regionMetaData: response.regionMetaData ?? [])
         }
     }
@@ -73,11 +82,14 @@ class PSIndexViewModel: ObservableObject {
         publisher.sink(receiveCompletion: { completion in
             switch completion {
             case .failure(let error):
+                self.loading = false
+                self.annotations = []
                 print(error)
             case .finished :
                 break
             }
         }){ psiValue in
+            self.loading = false
             self.annotations = self.getAnnotations(regionMetaData: psiValue?.regionMetaData ?? [])
         }
     }
