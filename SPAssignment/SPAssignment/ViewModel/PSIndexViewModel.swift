@@ -27,7 +27,7 @@ class PSIndexViewModel: ObservableObject {
             }
         }
     }
-    
+    private var publisher: AnyPublisher<PSIndex?, Error>?
     @Published var psIndexStatus = String() {
         didSet {
             DispatchQueue.main.async {
@@ -141,8 +141,8 @@ class PSIndexViewModel: ObservableObject {
      This method retrieves the PSIndex values via GET service call. This method is calling if iOS version is greater than or equal to 13.
      */
     func fetchPSIndexValues() {
-        let publisher = Webservice().fetchPSIndex()
-        publisher.sink(receiveCompletion: { completion in
+        publisher = Webservice().fetchPSIndex()
+        publisher?.sink(receiveCompletion: { completion in
             switch completion {
             case .failure(let error):
                 self.loading = false
