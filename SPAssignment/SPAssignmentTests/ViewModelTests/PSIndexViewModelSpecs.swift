@@ -29,7 +29,7 @@ class PSIndexViewModelSpecs: QuickSpec {
                                                 options: .alwaysMapped)
                             let decoder = JSONDecoder()
                             let psIndex = try decoder.decode(PSIndex.self, from: data)
-                            psIndexViewModel.annotations = psIndexViewModel.getAnnotations(regionMetaData: psIndex.regionMetaData ?? [])
+                            psIndexViewModel.annotations = psIndexViewModel.getAnnotations(resonse: psIndex)
                         } catch {
                             fail("Error while parsing the JSON!!")
                         }
@@ -67,6 +67,11 @@ class PSIndexViewModelSpecs: QuickSpec {
                     for psi in psIndexViewModel.annotations where psi.title == "west" {
                         expect(psi.coordinate.longitude).to(beCloseTo(103.7, within: 0.1))
                     }
+                }
+                
+                // Passes if 'psIndexViewModel.psIndexStatus' is healthy
+                it("check if the PSIndex status is healthy") {
+                    expect(psIndexViewModel.psIndexStatus).toEventually(contain("healthy"))
                 }
             }
         }

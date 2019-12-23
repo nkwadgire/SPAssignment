@@ -20,21 +20,21 @@ struct ContentView: View {
     var body: some View {
         ActivityIndicatorView(isShowing: $viewModel.loading) {
             NavigationView {
-                VStack {
-                    //MapView(annotationPoints: $viewModel.annotations).edgesIgnoringSafeArea(.bottom)
+                VStack {                    
                     if self.viewModel.annotations.isEmpty {
                         Text("Unable to fetch the PSIndex values, please try after some  time by pressing Refresh button.")
                         
                     } else {
                         MapView(annotationPoints: self.$viewModel.annotations).edgesIgnoringSafeArea(.bottom)
-                        
+                        Text("PSIndex Status: \(self.viewModel.psIndexStatus.camelCase())")
+                            .font(.footnote)
                     }
                 }
                 .navigationBarTitle(Text("PSIndex"), displayMode: .inline)
                 .navigationBarItems(trailing:
                     Button("Refresh") {
                         DispatchQueue.main.async {
-                                self.viewModel.updatePSIndex()
+                            self.viewModel.updatePSIndex()
                         }
                 })
             }

@@ -28,9 +28,10 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ view: MKMapView, context: Context) {
         let span = MKCoordinateSpan(latitudeDelta: 0.34, longitudeDelta: 0.34)
+        let count = annotationPoints.count
         if !annotationPoints.isEmpty {
-            let latitudeValue = annotationPoints[0].coordinate.latitude
-            let longitudeValue = annotationPoints[0].coordinate.longitude
+            let latitudeValue = annotationPoints[count - 1].coordinate.latitude
+            let longitudeValue = annotationPoints[count - 1].coordinate.longitude
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitudeValue, longitude: longitudeValue), span: span)
             view.setRegion(region, animated: true)
         }

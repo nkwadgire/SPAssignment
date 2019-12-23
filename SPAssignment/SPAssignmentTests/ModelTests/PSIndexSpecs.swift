@@ -66,6 +66,34 @@ class PSIndexSpecs: QuickSpec {
                     }
                 }
                 
+                // Passes if 'psIndex.items' is not empty
+                it("can parse and check if the items is not empty") {
+                    expect(psIndex.items?.isEmpty).toNot(equal(true))
+                }
+                
+                // Passes if 'psIndex.items' is kind of [PSIItems]
+                it("can parse and check if the items is kind of array of PSIItems objects") {
+                    expect(psIndex.items).to(beAKindOf([PSIItems].self))
+                }
+                
+                // Passes if 'psi.psiReadings?.o3SubIndex?.regionNorth' is equal to 1 where psi.title is "north"
+                it("can parse the correct o3SubIndex for north region") {
+                    for psi in psIndex.regionMetaData ?? [] where psi.name == "north" {
+                        for psi in psIndex.items ?? [] {
+                            expect(psi.psiReadings?.o3SubIndex?.regionNorth).to(beCloseTo(1, within: 0.1))
+                        }
+                    }
+                }
+                
+                // Passes if 'psi.psiReadings?.o3SubIndex?.pm10TwentyFourHourly' is equal to 1 where psi.title is "south"
+                it("can parse the correct pm10TwentyFourHourly for south region") {
+                    for psi in psIndex.regionMetaData ?? [] where psi.name == "south" {
+                        for psi in psIndex.items ?? [] {
+                            expect(psi.psiReadings?.pm10TwentyFourHourly?.regionSouth).to(beCloseTo(23, within: 0.1))
+                        }
+                    }
+                }
+                
                 // Passes if 'psIndex.apiInfo?.infoStatus' is equal to "healthy"
                 it("can parse the api_info Status") {
                     expect(psIndex.apiInfo?.infoStatus).to(equal("healthy"))
