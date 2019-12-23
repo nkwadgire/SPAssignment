@@ -19,13 +19,31 @@ class Webservice: NSObject {
     // MARK: Webservice methods
     
     /**
+    This method is returns the current date_time in yyyy-MM-dd'T'HH:mm:ss format
+    */
+    func currentDateTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let currentDateString = formatter.string(from: Date())
+        let currentDateTime = formatter.date(from: currentDateString)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let currentDateTimeString = formatter.string(from: currentDateTime!)
+        return currentDateTimeString
+    }
+    
+    /**
      This method is invoked if the iOS version is 13 and above.
      */
     func fetchPSIndex() -> AnyPublisher<PSIndex?, Error> {
-        
-        guard let psiURL = URL(string: URLList.PSIUrl) else {
+        let requestURL = String(format: "%@?date_time=%@", URLList.PSIUrl, currentDateTime())
+        guard let psiURL = URL(string: requestURL) else {
             fatalError("Invalid URL")
         }
+        var request = URLRequest(url: psiURL)
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
+        
         return URLSession.shared.dataTaskPublisher(for: psiURL)
             .map { $0.data }
             .decode(type: PSIndex.self, decoder: JSONDecoder())
@@ -38,7 +56,13 @@ class Webservice: NSObject {
      This method is invoked if the iOS version is less than 13.
      */
     func getPSIndex(completion: @escaping(PSIndex) -> Void) {
-        let url = URL(string: URLList.PSIUrl)!
+        let requestURL = String(format: "%@?date_time=%@", URLList.PSIUrl, currentDateTime())
+        let url = URL(string: requestURL)!
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
