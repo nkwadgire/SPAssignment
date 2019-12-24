@@ -50,11 +50,7 @@ class PSIndexViewModel: ObservableObject {
     
     func updatePSIndex() {
         self.loading = true
-        if #available(iOS 13.0, *) {
-            fetchPSIndexValues()
-        } else {
-            getPSIndexValues()
-        }
+        getPSIndexValues()
     }
     
     func psiReading(regionName: String, readingTitle: String, endvalue: PSIReadingValues) -> String {
