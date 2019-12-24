@@ -66,13 +66,16 @@ class Webservice: NSObject {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                fatalError("Error: \(error.localizedDescription)")
+                print("Error: \(error.localizedDescription)")
+                completion(PSIndex())
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                fatalError("Error: invalid HTTP response code")
+                print("Error: invalid HTTP response code")
+                return
             }
             guard let data = data else {
-                fatalError("Error: missing response data")
+                print("Error: missing response data")
+                return
             }
             do {
                 let decoder = JSONDecoder()
